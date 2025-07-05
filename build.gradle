@@ -14,6 +14,13 @@ java {
 	}
 }
 
+bootJar {
+	enabled = true
+}
+jar {
+	enabled = false
+}
+
 repositories {
 	mavenCentral()
 }
@@ -27,6 +34,16 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// Test scope
+	testCompileOnly("org.projectlombok:lombok:1.18.30")
+	testAnnotationProcessor("org.projectlombok:lombok:1.18.30")
+
+	//lombok
+	compileOnly("org.projectlombok:lombok:1.18.30")
+	annotationProcessor("org.projectlombok:lombok:1.18.30")
+
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	implementation("org.apache.commons:commons-lang3:3.17.0")
 }
 
 tasks.named('test') {

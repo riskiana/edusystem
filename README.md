@@ -28,19 +28,19 @@ EduSystem is a fullstack education application designed for students, teachers, 
 ## 📦 Project Structure
 
 ```
-edusystem/
-├── backend/               # Spring Boot app
-│   ├── src/
-│   ├── Dockerfile
-│   ├── build.gradle
-│   └── application.yml
-├── frontend/              # React app
-│   ├── public/
-│   ├── src/
-│   └── Dockerfile
-├── .env                   # Environment variables
-├── docker-compose.yml     # Multi-container setup
+edusystem-backend/
+├── src/
+│   └── main/
+│       ├── java/com/example/edusystem/...
+│       └── resources/
+│           ├── application.yml
+│           └── db/migration/V1__init.sql
+├── build.gradle
+├── Dockerfile
+├── .env
+├── docker-compose.yml 
 └── README.md
+
 ```
 
 ---
